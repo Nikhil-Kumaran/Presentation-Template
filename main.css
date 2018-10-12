@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(30, 142, 223);
+}
+.section{
+    font-size: 2em;
+    text-align: center;
+    background: rgb(30, 142, 223);
+}
+
+
+.menu-container {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    transition-delay: .1s;
+  }
+  
+  .menu {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    background-color: #222;;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    transition: all .2s;
+  }
+  
+  #hamburger {
+      
+    display: none;
+  }
+  
+  label {
+    background: #222;
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 2;
+    cursor: pointer;
+  }
+  label:before {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 65%;
+    width: 1em;
+    height: 0.15em;
+    background: white;
+    box-shadow: 0 0.25em 0 0 white, 0 0.5em 0 0 white;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  
+  #hamburger:checked ~ .menu-container {
+    width: 20vw;
+    height: 100vh;
+    transition-delay: 0s;
+  }
+  
+  #hamburger:checked ~ .menu-container .menu {
+    width: 250vh;
+    height: 250vh;
+    transition: all .2s;
+    
+  }
+  
+  .menu-container .links {
+    position: absolute;
+    left: 10vw;
+    top: 50vh;
+    z-index: 3;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+    
+  }
+  .menu-container .links a {
+    display: block;
+    color: rgba(255,255,255,1);
+    font-size: 1.5em;
+    text-decoration: none;
+    margin: 3rem;
+    transition: all .2s;
+    transition-delay: 0.2s;
+  }
+  .content {
+    
+    transition: all .2s;
+    transition-delay: .1s;
+  }
+  
+  #hamburger:checked ~ .content {
+    padding-left: 20vw;
+    transition: all .2s;
+    transition-delay: 0s;
+  }  
